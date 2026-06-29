@@ -17,9 +17,12 @@ df['Contract'] = pd.to_numeric(df['Contract'], errors='coerce')
 
 
 
-# df.drop_duplicates(subset='Ma'): xoa cac dong co cung ma thi sinh
-# Chi giu dong DUNG DAU TIEN cua moi ma; gan lai vao df
-df = df.drop_duplicates(subset='Ma')
+
+
+
+
+
+df = df.drop_duplicates(subset='')
 
 
 
