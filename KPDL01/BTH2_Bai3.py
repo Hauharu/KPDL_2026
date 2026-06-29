@@ -158,7 +158,7 @@ def phan_tich(ten_tp, df_tp):
     # .notna(): tra ve True neu o do KHONG phai NaN (tuc la co gia tri)
     # &: phep AND bitwise - ca hai dieu kien phai dung
     # => Loc ra nhung dong ma ca KHTN lan KHXH deu co gia tri
-    ca_hai = df_tp[df_tp['KHTN'].notna() & df_tp['KHXH'].notna()]
+    ca_hai = df_tp[(df_tp['KHTN'].notna() & (df_tp['KHTN'] > 0)) & (df_tp['KHXH'].notna() & (df_tp['KHXH']>0))]
     print(f"\n[3] Thi sinh thi ca KHTN va KHXH: {len(ca_hai)} nguoi")
 
     if len(ca_hai) > 0:
